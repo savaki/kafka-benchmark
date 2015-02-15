@@ -1,0 +1,9 @@
+# ignore intellij files
+/.idea
+
+# ignore temp files
+/*.env
+
+# ignore generated files
+/aws/*.tfstate*
+/target
