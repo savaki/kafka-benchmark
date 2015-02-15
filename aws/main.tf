@@ -47,10 +47,6 @@ resource "aws_instance" "zookeeper" {
     }
 }
 
-#             "sudo service docker start",
-#             "sudo docker pull savaki/zookeeper:latest",
-#             "sudo docker run -d -p 2181:2181 -P savaki/zookeeper:latest"
-
 resource "aws_instance" "kafka_1" {
     associate_public_ip_address = "1"
     ami                  = "${lookup(var.images, var.region)}"
