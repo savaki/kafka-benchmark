@@ -11,12 +11,18 @@ end
 
 #---------------------------------------------------------------------------
 
-namespace :test do
+namespace :aws do
+  desc 'setup the aws environment'
+  task :setup do
+    puts 'placeholder to set up the aws environment'
+  end
 
-  desc 'run the service in amazon'
-  task :aws do
+  desc 'stand up the kafka cluster and run tests against it'
+  task :run_benchmark => :setup do
     id   = timestamp
     path = prepare(id)
+
+    puts "placeholder to run test-id #{id} in dir #{path}"
   end
 end
 
