@@ -5,5 +5,7 @@
 /*.env
 
 # ignore generated files
-/aws/*.tfstate*
+/aws/kafka/output.tf
+/aws/kafka/terraform.tfstate*
+/aws/setup/terraform.tfstate*
 /target

@@ -2,10 +2,6 @@ variable "id" {
 	default = "fc91e0a0-b40f-11e4-978a-0242ac110002"
 }
 
-variable "region" {
-	default = "us-east-1"
-}
-
 variable "key_name" {
 	default = "us-east-1"
 }
@@ -16,14 +12,6 @@ variable "instance_type" {
 
 variable "s3_bucket" {
 	default = "kafka-benchmarking"
-}
-
-variable "vpc_id" {
-	default = "vpc-3dd4bc58"
-}
-
-variable "subnet_id" {
-	default = "subnet-ab9004dc"
 }
 
 variable "instance_count_kafka" {
@@ -38,22 +26,24 @@ variable "iam_profile" {
 	default = "kafka"
 }
 
-# Amazon Linux AMI 2014.09.2 (HVM)
-variable "images" {
-    default = {
-        "us-west-1" = "ami-42908907"
-        "us-east-1" = "ami-146e2a7c"
-    }
+variable "volume_size" {
+  default = 250
 }
 
-# # Ubuntu Trusty 14.04 LTS (x64) (ebs-ssd)
+# # Amazon Linux AMI 2014.09.2 (HVM)
 # variable "images" {
 #     default = {
-#         "us-east-1" = "ami-36f8b15e"
+#         "us-west-1" = "ami-42908907"
+#         "us-east-1" = "ami-146e2a7c"
 #     }
 # }
-# #
 
+# Ubuntu Trusty 14.04 LTS (x64) (ebs-ssd)
+variable "images" {
+    default = {
+        "us-east-1" = "ami-36f8b15e"
+    }
+}
 
 ## private key that has access to instances
 variable "key_path" {
